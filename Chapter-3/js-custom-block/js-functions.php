@@ -1,6 +1,7 @@
 <?php
 /* add this to functions.php after this comment */
 
+if ( ! function_exists( 'blockstylingexample_enqueue_block_editor_assets' ) ) : 
 function blockstylingexample_enqueue_block_editor_assets() {  
     wp_enqueue_script(  
         'blockstylingexample-block-js',  
@@ -9,6 +10,7 @@ function blockstylingexample_enqueue_block_editor_assets() {
         filemtime( plugin_dir_path( __FILE__ ) . '/assets/js/block-styles.js' )  
     );  
 } 
+endif;
 add_action( 'enqueue_block_editor_assets', 'blockstylingexample_enqueue_block_editor_assets' ); 
 
 if ( ! function_exists( 'blockstylingexample_enqueue_block_styles' ) ) : 
@@ -20,6 +22,6 @@ if ( ! function_exists( 'blockstylingexample_enqueue_block_styles' ) ) :
             'path'   => get_parent_theme_file_path( 'assets/custom/block-styles.css' ), 
         ) 
     ); 
-} 
-add_action( 'init', 'blockstylingexample_enqueue_block_styles' ); 
+}
 endif;
+add_action( 'init', 'blockstylingexample_enqueue_block_styles' ); 

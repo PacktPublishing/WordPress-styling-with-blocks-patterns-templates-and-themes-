@@ -18,8 +18,8 @@ if ( ! function_exists( 'blockstylingexample_block_styles' ) ) :
             ) 
         ); 
     }  
-add_action( 'init', 'blockstylingexample_block_styles' ); 
 endif;
+add_action( 'init', 'blockstylingexample_block_styles' ); 
 
 if ( ! function_exists( 'blockstylingexample_enqueue_block_styles' ) ) : 
     function blockstylingexample_enqueue_block_styles() { 
@@ -31,5 +31,5 @@ if ( ! function_exists( 'blockstylingexample_enqueue_block_styles' ) ) :
         ) 
     ); 
 } 
-add_action( 'init', 'blockstylingexample_enqueue_block_styles' ); 
 endif;
+add_action( 'init', 'blockstylingexample_enqueue_block_styles' ); 
